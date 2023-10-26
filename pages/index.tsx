@@ -1,14 +1,11 @@
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 import TestImage from '/public/test-image.png';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
-  const [count, setCount] = useState(0);
-
   return (
     <div
       className={`mx-auto max-w-screen-md py-10 space-y-3 ${inter.className}`}
@@ -22,15 +19,6 @@ export default function Home() {
         >
           리액트
         </Link>
-      </div>
-      <div className="flex items-center space-x-3">
-        <button
-          className="bg-amber-500 px-4 py-1 rounded-md"
-          onClick={handleClick}
-        >
-          버튼
-        </button>
-        <div>{count}</div>
       </div>
       <Image src={TestImage} alt="테스트용 로컬 이미지" />
       <Image
@@ -54,8 +42,4 @@ export default function Home() {
       </p>
     </div>
   );
-
-  function handleClick() {
-    setCount((count) => count + 1);
-  }
 }
