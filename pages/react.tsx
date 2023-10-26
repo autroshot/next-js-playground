@@ -19,6 +19,6 @@ export default function React() {
   );
 
   function handleClick() {
-    setCount((count) => count + 1);
+    setCount(count + 1);
   }
 }
