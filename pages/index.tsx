@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import TestImage from '/public/test-image.png';
 
@@ -13,6 +14,15 @@ export default function Home() {
       className={`mx-auto max-w-screen-md py-10 space-y-3 ${inter.className}`}
     >
       <h1 className="text-3xl font-bold">놀이터</h1>
+      <div>
+        <h2 className="text-lg">링크</h2>
+        <Link
+          href="/react"
+          className="text-blue-600 hover:underline hover:text-blue-500"
+        >
+          리액트
+        </Link>
+      </div>
       <div className="flex items-center space-x-3">
         <button
           className="bg-amber-500 px-4 py-1 rounded-md"
