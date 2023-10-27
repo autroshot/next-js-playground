@@ -13,12 +13,20 @@ export default function Home() {
       <h1 className="text-3xl font-bold">놀이터</h1>
       <div>
         <h2 className="text-lg">링크</h2>
-        <Link
-          href="/react"
-          className="text-blue-600 hover:underline hover:text-blue-500"
-        >
-          리액트
-        </Link>
+        <div className="space-x-3">
+          <Link
+            href="/react"
+            className="text-blue-600 hover:underline hover:text-blue-500"
+          >
+            리액트
+          </Link>
+          <Link
+            href="/api-test"
+            className="text-blue-600 hover:underline hover:text-blue-500"
+          >
+            API
+          </Link>
+        </div>
       </div>
       <Image src={TestImage} alt="테스트용 로컬 이미지" />
       <Image
