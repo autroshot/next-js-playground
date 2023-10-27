@@ -12,6 +12,9 @@ const config: Config = {
         noto: ['var(--font-noto-sans-kr)', 'sans-serif'],
         pretendard: ['var(--font-pretendard)', 'sans-serif'],
       },
+      colors: {
+        primary: '#5c6ac4',
+      },
     },
   },
   plugins: [],

@@ -40,6 +40,10 @@ export default function Home() {
         모든 사람은 의견의 자유와 표현의 자유에 대한 권리를 가진다. No one shall
         be subjected to arbitrary arrest, detention or exile.
       </p>
+      <div className="flex space-x-3">
+        <button className="bg-primary">Primary 버튼</button>
+        <button className="bg-[#ecc94b]">임시 색상 버튼</button>
+      </div>
     </div>
   );
 }
