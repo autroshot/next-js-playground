@@ -1,7 +1,11 @@
-import { useState } from 'react';
+import MyCountDisplay from '@/components/my-count-display';
+import { createContext, useState } from 'react';
+
+export const MyCountContext = createContext(10);
 
 export default function React() {
   const [count, setCount] = useState(0);
+  const [MyCount, setMyCount] = useState(100);
 
   return (
     <div className="mx-auto max-w-screen-md py-10 space-y-3">
@@ -15,10 +19,18 @@ export default function React() {
         </button>
         <div>{count}</div>
       </div>
+      <MyCountContext.Provider value={MyCount}>
+        <MyCountDisplay onClick={handleMyCountButtonClick} />
+        <MyCountDisplay onClick={handleMyCountButtonClick} />
+      </MyCountContext.Provider>
     </div>
   );
 
   function handleClick() {
     setCount(count + 1);
+  }
+
+  function handleMyCountButtonClick() {
+    setMyCount(MyCount + 1);
   }
 }
